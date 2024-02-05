@@ -54,7 +54,7 @@ session_start();
         </label>
         <label class="logo"><span><i class="fa fa-stethoscope"></i></span>Medical Services</label>
         <ul>
-            <li><a href="home.php">Home</a></li>
+            <li><a href="index.php">Home</a></li>
 
             <li><a href="shop.php">Shop</a>
 
