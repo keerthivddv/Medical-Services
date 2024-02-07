@@ -4,7 +4,6 @@ session_start();
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
     <title>Medical Services</title>
     <link rel="stylesheet" href="css/home.css">

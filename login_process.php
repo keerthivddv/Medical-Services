@@ -4,7 +4,7 @@ session_start();
 function validate_credentials($username, $password) {
     // Hard-coded list of users
     $users = [
-        ['username' => '1', 'password' => '1'],
+        ['username' => 'user', 'password' => 'user'],
         ['username' => 'user2', 'password' => 'password2'],
         // Add more users here
     ];

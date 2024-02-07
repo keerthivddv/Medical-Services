@@ -12,6 +12,14 @@ if (isset($_SESSION['error'])) {
     // Unset the error session variable
     unset($_SESSION['error']);
 }
+if (isset($_SESSION['error_signup'])) {
+  echo '<div class="alert alert-danger">';
+  echo $_SESSION['error_signup'];
+  echo '</div>';
+
+  // Unset the error session variable
+  unset($_SESSION['error_signup']);
+}
 ?>
 <head>
     <title>Medical Services</title>
@@ -229,7 +237,7 @@ form .btn input[type="submit"]{
         <label class="logo"><span><i class="fa fa-stethoscope"></i></span>Medical Services</label>
         <ul>
             
-            <li><a href="index.php">log out</a></li>
+            <li><a href="index.php">Home</a></li>
             
         </ul>
     </nav>
@@ -252,10 +260,10 @@ Signup Form</div>
 <div class="form-inner">
           <form action="login_process.php" class="login" method="post">
             <div class="field">
-              <input type="text" name="uname" placeholder="Email Address" required>
+              <input type="text" name="username" placeholder="Email Address" required>
             </div>
 <div class="field">
-              <input type="password"  name="upassword" placeholder="Password" required>
+              <input type="password"  name="password" placeholder="Password" required>
             </div>
 <div class="pass-link">
 <a href="#">Forgot password?</a></div>
@@ -267,18 +275,18 @@ Signup Form</div>
 <div class="signup-link">
 Not a member? <a href="">Signup now</a></div>
 </form>
-<form action="" class="signup">
-            <div class="field">
-              <input type="text" placeholder="Name" required>
+<form action="signup_process.php" class="signup" method="post">
+<div class="field">
+              <input type="text" id="username" placeholder="Username" required>
             </div>
 <div class="field">
-              <input type="password" placeholder="Contact Number" required>
-            </div>
-            <div class="field">
-              <input type="password" placeholder="E-mail" required>
+              <input type="text" id="email" placeholder="E-mail" required>
             </div>
 <div class="field">
-              <input type="password" placeholder="password" required>
+              <input type="number" id="contact" placeholder="Contact Number" required>
+            </div>
+<div class="field">
+              <input type="password" id="password" placeholder="password" required>
             </div>
 <div class="field btn">
               <div class="btn-layer">
